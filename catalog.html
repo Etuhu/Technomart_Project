@@ -6,30 +6,29 @@
   </head>
   <body>
     <header class="main-header">
-      <section class="main-header-top">
-        <h2 class="visually-hidden">Управление корзиной, закладками и поиском</h2>
+      <div class="main-header-top">
         <a href="index.html" class="logo header-logo">Техномарт</a>
-        <form class="search-form">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" class="search-field" name="search" value="Поиск">
         </form>
-        <span>Закладки: 0</span>
-        <span class="cart full-cart">Корзина: 10</span>
+        <a href="#">Закладки: 0</a>
+        <a href="#" class="cart full-cart">Корзина: 10</a>
         <a href="#" class="button order-button">Оформить заказ</a>
-      </section>
-      <section class="main-header-middle">
+      </div>
+      <div class="main-header-middle">
         <h2>Интернет-магазин строительных материалов и инструментов для ремонта</h2>
         <p class="main-header-contacts">
           <span>+7 (812) 555-05-55</span>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
         <div class="user-account">
-          <a href="#" class="icon user-account-icon"></a>
+          <a href="#" class="icon user-account-icon"><span class="visually-hidden">Перейти в личный кабинет</span></a>
           <a href="#">Равшан Джамшутович</a>
-          <a href="#" class="icon account-exit-icon"></a>
+          <a href="#" class="icon account-exit-icon"><span class="visually-hidden">Выйти из аккаунта</span></a>
           <a href="#">Мои заказы</a>
           <a href="#">Личный кабинет</a>
         </div>
-      </section>
+      </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
@@ -44,27 +43,49 @@
     </header>
     <main class="container">
       <ul class="breadcrumbs">
-        <li><a href="index.html"></a></li>
+        <li><a href="index.html" aria-label="Главная"><img src="img/icon-home.svg" width="15" height="12" alt="Главная"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li><a href="#">Перфораторы</a></li>
       </ul>
       <h1>Перфораторы</h1>
       <section class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <h2 class="main-filter-title">Фильтр:</h2>
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <h3 class="filter-title">Цена:</h3>
+          <div class="price-range-filter">
+            <span class="price-toggle price-toggle-left" aria-label="Установить нижнюю границу цены" tabindex="0"></span>
+            <div class="price-range-line"></div>
+            <span class="price-toggle price-toggle-right" aria-label="Установить верхнюю границу цены" tabindex="0"></span>
+          </div>
+          <label class="visually-hidden" for="min-price">Нижняя граница цены</label><input class="price-field price-field-min" type="number" name="min-price" id="min-price" value="0"> —
+          <label class="visually-hidden" for="max-price">Верхняя граница цены</label><input class="price-field price-field-max" type="number" name="max-price" id="max-price" value="30000">
+          <fieldset class="brands-filter">
+            <legend class="filter-title">Производители:</legend>
+            <label><input type="checkbox" name="brand" value="Bosch" checked>Bosch</label>
+            <label><input type="checkbox" name="brand" value="Interscol">Интерскол</label>
+            <label><input type="checkbox" name="brand" value="Makita" checked>Makita</label>
+            <label><input type="checkbox" name="brand" value="Dewalt">Dewalt</label>
+            <label><input type="checkbox" name="brand" value="Hitachi">Hitachi</label>
+          </fieldset>
+          <fieldset class="power-supply-filter">
+            <legend>Питание</legend>
+            <label><input type="radio" name="power-supply" value="accumulator" checked>Аккумуляторные</label>
+            <label><input type="radio" name="power-supply" value="cable">Сетевые</label>
+          </fieldset>
+          <input type="submit" value="Показать"> 
+        </form>
       </section>
       <section class="catalog">
-        <h2 class="visually-hidden">Сортировка товаров</h2>
         <div class="sorting">
-          <span>Сортировка:</span>
+          <h2 class="sorting-title">Сортировка:</h2>
           <ul class="sorting-list">
-            <li class="sorting-item sorting-item-active">По цене</li>
-            <li class="sorting-item">По типу</li>
-            <li class="sorting-item">По функционалу</li>
+            <li class="sorting-item sorting-item-active"><button class="sorting-button sorting-button-price" type="button">По цене</button></li>
+            <li class="sorting-item"><button class="sorting-button sorting-button-type" type="button">По типу</button></li>
+            <li class="sorting-item"><button class="sorting-button sorting-button-functions" type="button">По функционалу</button></li>
           </ul>
-          <span class="sorting-button sorting-min-button sorting-button-active"></span>
-          <span class="sorting-button sorting-max-button"></span>
+          <button class="sorting-button-toggle sorting-min-button active-toggle" type="button" aria-label="Сначала дешевые"></button>
+          <button class="sorting-button-toggle sorting-max-button" type="button" aria-label="Сначала дорогие"></button>
         </div>
         <ul class="catalog-list">
           <li class="catalog-list-item">
@@ -138,10 +159,10 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">1</li>
-          <li class="pagination-item">2</li>
-          <li class="pagination-item">3</li>
-          <li class="pagination-item">Следующая</li>
+          <li class="pagination-item pagination-item-current"><a>1</a></li>
+          <li class="pagination-item"><a href="#">2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item"><a href="#">Следующая</a></li>
         </ul>
       </section>
       <section class="puncher-info">
@@ -186,10 +207,17 @@
           <li class="social-link-item social-link-instagram"><a href="instagram.com/technomart">Insta</a></li>
         </ul>
         <p class="main-footer-email">Обратная связь:
-          mail@htmlacademy.ru</p>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p class="main-footer-developer">Разработано —
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </section>
     </footer>
+    <section class="modal modal-confirm">
+      <h2 class="visually-hidden">Информация об успешном добавлении товара в корзину</h2>
+      <button class="modal-close-button" type="button" aria-label="Закрыть окно-подтверждение о добавленном в корзину товаре" tabindex="0">X</button>
+      <span>Товар добавлен в корзину!</span>
+      <a class="button order-button" href="#">Оформить заказ</a>
+      <button class="button continue-shopping-button" type="button">Продолжить покупки</button>
+    </section>
   </body>
 </html>
