@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -267,17 +267,17 @@
     <section class="modal modal-map">
       <h2 class="visually-hidden">Основная карта</h2>
       <img src="img/map.png" width="970" height="476" alt="Расположение Техномарта на карте">
-      <button class="map-close-button" type="button" aria-label="Закрыть карту" tabindex="0">X</button>
+      <button class="close-button map-close-button" type="button" aria-label="Закрыть карту" tabindex="0"></button>
     </section>
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <button class="modal-close-button" type="button" aria-label="Закрыть окно обратной связи" tabindex="0">X</button>
+      <button class="close-button modal-close-button" type="button" aria-label="Закрыть окно обратной связи" tabindex="0"></button>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
         <label for="name">Ваше имя:</label>
         <input type="text" id="name" name="name" placeholder="Имя Фамилия">
         <label for="email">Ваш e-mail:</label>
         <input type="text" id="email" name="email" placeholder="email@example.com">
-        <label for="letter-text">Текст письма</label>
+        <label for="letter-text">Текст письма:</label>
         <textarea id="letter-text" name="letter-text" placeholder="В свободной форме"></textarea>
         <input class="button modal-form-button" type="submit" value="Отправить">
       </form>

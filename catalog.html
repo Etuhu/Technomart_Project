@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог Техномарта</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -51,7 +51,7 @@
         <li><a href="#">Инструмент</a></li>
         <li><a href="#">Перфораторы</a></li>
       </ul>
-      <h1>Перфораторы</h1>
+      <div class="catalog-title-block"><h1 class="catalog-main-title">Перфораторы</h1></div>
       <section class="filters">
         <h2 class="main-filter-title">Фильтр:</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
@@ -65,25 +65,25 @@
           <label class="visually-hidden" for="max-price">Верхняя граница цены</label><input class="price-field price-field-max" type="number" name="max-price" id="max-price" value="30000">
           <fieldset class="brands-filter">
             <legend class="filter-title">Производители:</legend>
-            <label><input type="checkbox" name="brand" value="Bosch" checked>Bosch</label>
-            <label><input type="checkbox" name="brand" value="Interscol">Интерскол</label>
-            <label><input type="checkbox" name="brand" value="Makita" checked>Makita</label>
-            <label><input type="checkbox" name="brand" value="Dewalt">Dewalt</label>
-            <label><input type="checkbox" name="brand" value="Hitachi">Hitachi</label>
+            <input type="checkbox" name="brand" value="Bosch" id="Bosch" checked><label for="Bosch">Bosch</label>
+            <input type="checkbox" name="brand" value="Interscol" id="Interscol"><label for="Interscol">Интерскол</label>
+            <input type="checkbox" name="brand" value="Makita" id="Makita" checked><label for="Makita">Makita</label>
+            <input type="checkbox" name="brand" value="Dewalt" id="Dewalt"><label for="Dewalt">Dewalt</label>
+            <input type="checkbox" name="brand" value="Hitachi" id="Hitachi"><label for="Hitachi">Hitachi</label>
           </fieldset>
           <fieldset class="power-supply-filter">
-            <legend>Питание</legend>
-            <label><input type="radio" name="power-supply" value="accumulator" checked>Аккумуляторные</label>
-            <label><input type="radio" name="power-supply" value="cable">Сетевые</label>
+            <legend class="filter-title">Питание</legend>
+            <input type="radio" name="power-supply" value="accumulator" id="accumulator" checked><label for="accumulator">Аккумуляторные</label>
+            <input type="radio" name="power-supply" value="cable" id="cable"><label for="cable">Сетевые</label>
           </fieldset>
-          <button type="submit">Показать</button> 
+          <button class="submit-button" type="submit">Показать</button> 
         </form>
       </section>
       <section class="catalog">
         <div class="sorting">
           <h2 class="sorting-title">Сортировка:</h2>
           <ul class="sorting-list">
-            <li class="sorting-item sorting-item-active"><a href="#" class="sorting-link sorting-link-price">По цене</a></li>
+            <li class="sorting-item"><a href="#" class="sorting-link sorting-link-price sorting-link-active">По цене</a></li>
             <li class="sorting-item"><a href="#" class="sorting-link sorting-link-type">По типу</a></li>
             <li class="sorting-item"><a href="#" class="sorting-link sorting-link-functions">По функционалу</a></li>
           </ul>
@@ -169,8 +169,7 @@
         </ul>
       </section>
       <section class="puncher-info">
-        <h2>Информация о перфораторах</h2>
-        <span>Пара слов о перфораторах</span>
+        <h2 class="puncher-info-title">Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В
@@ -203,9 +202,9 @@
         <p class="main-footer-copyright">© 2010–2019 Компания «Техномарт»
           Все права защищены</p>
         <ul class="social-link-list">
-          <li class="social-link-item social-link-vk"><a href="vk.com/technomart">VK</a></li>
-          <li class="social-link-item social-link-facebook"><a href="fb.com/technomart">Fb</a></li>
-          <li class="social-link-item social-link-instagram"><a href="instagram.com/technomart">Insta</a></li>
+          <li class="social-link-item social-link-vk"><a href="vk.com/technomart"></a></li>
+          <li class="social-link-item social-link-facebook"><a href="fb.com/technomart"></a></li>
+          <li class="social-link-item social-link-instagram"><a href="instagram.com/technomart"></a></li>
         </ul>
         <p class="main-footer-email">Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
@@ -215,10 +214,12 @@
     </footer>
     <section class="modal modal-confirm">
       <h2 class="visually-hidden">Информация об успешном добавлении товара в корзину</h2>
-      <button class="modal-close-button" type="button" aria-label="Закрыть окно-подтверждение о добавленном в корзину товаре" tabindex="0">X</button>
+      <button class="close-button modal-close-button" type="button" aria-label="Закрыть окно-подтверждение о добавленном в корзину товаре" tabindex="0"></button>
       <span>Товар добавлен в корзину!</span>
-      <a class="button order-button" href="#">Оформить заказ</a>
-      <button class="button continue-shopping-button" type="button">Продолжить покупки</button>
+      <div class="modal-buttons-block">
+        <a class="button modal-order-button" href="#">Оформить заказ</a>
+        <button class="button continue-shopping-button" type="button">Продолжить покупки</button>
+      </div>
     </section>
   </body>
 </html>
