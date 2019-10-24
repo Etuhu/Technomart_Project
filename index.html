@@ -178,38 +178,39 @@
             Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <ul class="service-list list-marker-switch">
-            <li class="service-item">
-              <span tabindex="0">Доставка</span>
-              <section class="service-item-delivery">
+          <div class="service-content-wrapper">
+            <input class="visually-hidden" type="radio" id="delivery" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="guarantee" name="toggle">
+            <input class="visually-hidden" type="radio" id="credit" name="toggle">  
+            <div class="service-slider">
+              <label for="delivery">Доставка</label>
+              <label for="guarantee" tabindex="0">Гарантия</label>
+              <label for="credit" tabindex="0">Кредит</label>
+            </div>
+            <ul class="service-list list-marker-switch">
+              <li class="service-item service-item-delivery">
                 <h3>Доставка</h3>
                 <p class="basic-text">Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
                   Ведь мы неплохо заработаем,
                   поднимая его на ваш этаж!</p>
-              </section>
-            </li>
-            <li class="service-item">
-              <span tabindex="0">Гарантия</span>
-              <section class="service-item-guarantee">
+              </li>
+              <li class="service-item service-item-guarantee">
                 <h3>Гарантия</h3>
                 <p class="basic-text">Если купленный у нас товар поломается или заискрит,
                   а также в случае пожара, спровоцированного его возгаранием,
                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем
                   сгоревший товар на новый.
                   Дом уж восстановите как-нибудь сами.</p>
-              </section>
-            </li>
-            <li class="service-item">
-              <span tabindex="0">Кредит</span>
-              <section class="service-item-credit">
+              </li>
+              <li class="service-item service-item-credit">
                 <h3>Кредит</h3>
                 <p class="basic-text">Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.</p>
                 <a href="#" class="button credit-request-button">Отправить заявку</a>
-              </section>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
       <section class="company-information container">

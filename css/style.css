@@ -1,5 +1,5 @@
-html { 
-  box-sizing: border-box; 
+html {
+  box-sizing: border-box;
 }
 
 /* html,
@@ -20,10 +20,10 @@ body {
   background-color: #ffffff;
 }
 
-*, 
-*::before, 
-*::after { 
-  box-sizing: inherit; 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a {
@@ -81,6 +81,8 @@ a {
 }
 
 .main-header {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
   background-color: #f3f7f9;
 }
 
@@ -395,6 +397,10 @@ a.order-button:active {
   color: #32425c;
 }
 
+.catalog {
+  width: 700px;
+}
+
 .catalog-list {
   display: flex;
   justify-content: space-between;
@@ -428,7 +434,7 @@ a.order-button:active {
   display: inline-block;
   width: 141px;
   height: 38px;
-  
+
   text-align: center;
   color: #ffffff;
 
@@ -439,7 +445,7 @@ a.order-button:active {
 
 .catalog-list-item .buy-item-button {
   border: none;
-  background-color: #63a63e;  
+  background-color: #63a63e;
 }
 
 .catalog-list-item .buy-item-button:hover,
@@ -502,7 +508,18 @@ a.order-button:active {
   background-color: #f4f8f9;
 }
 
-.service-item span {
+.service-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-slider {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.service-slider label {
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -513,15 +530,23 @@ a.order-button:active {
   cursor: pointer;
 }
 
-.service-item span:hover {
+.service-slider label:hover {
   background-color: #293449;
 }
 
-.service-item span:active,
-.service-item span:focus {
+.service-slider label:active,
+.service-slider label:focus {
   color: #32425c;
 
   background-color: #ffffff;
+}
+
+.service-list {
+  width: 620px;
+}
+
+.service-item {
+  display: none;
 }
 
 .service-item h3 {
@@ -545,6 +570,20 @@ a.order-button:active {
 .service-item-credit {
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
+}
+
+#delivery:checked ~ .service-list .service-item-delivery,
+#guarantee:checked ~ .service-list .service-item-guarantee,
+#credit:checked ~ .service-list .service-item-credit {
+  display: block;
+}
+
+#delivery:checked ~ .service-slider label[for="delivery"],
+#guarantee:checked ~ .service-slider label[for="guarantee"],
+#credit:checked ~ .service-slider label[for="credit"] {
+  color: #32425c;
+
+  background-color: #ffffff;
 }
 
 .company-information {
@@ -719,6 +758,10 @@ a.order-button:active {
   background-position: 50%;
 }
 
+.breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -732,12 +775,18 @@ a.order-button:active {
   outline: 1px solid blue;
 }
 
-.catalog-title-block {
+.catalog-main-title {
+  color: #32425c;
+
   background-color: #f2f6f8;
 }
 
-.catalog-main-title {
-  color: #32425c;
+.catalog-content-container {
+  display: flex;
+}
+
+.filters {
+  width: 220px;
 }
 
 .main-filter-title {
@@ -800,7 +849,7 @@ input[type="radio"]:disabled + label {
 }
 
 .submit-button {
-  border: 1px solid #e5e5e5;  
+  border: 1px solid #e5e5e5;
   border-radius: 2px;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -885,7 +934,7 @@ input[type="radio"]:disabled + label {
 }
 
 .catalog-list-item:hover {
-  box-shadow: 0px 5px 12.5px 0 rgba(41, 52, 73, 0.5); 
+  box-shadow: 0px 5px 12.5px 0 rgba(41, 52, 73, 0.5);
 }
 
 .pagination-item a {
@@ -920,12 +969,16 @@ input[type="radio"]:disabled + label {
   background-color: #ee3643;
 }
 
-.puncher-info {
+.puncher-info-wrapper {
   background-color: #f2f6f8;
 }
 
 .puncher-info-title {
   color: #32425c;
+}
+
+.modal-confirm {
+  display: none;
 }
 
 .modal-confirm span {
