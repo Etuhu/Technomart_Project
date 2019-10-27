@@ -852,7 +852,7 @@ a.order-button:active {
   background-position: center;
 }
 
-.catalog-list-item.new-tag .current-price {
+.catalog-list-item.no-sale .current-price {
   margin-top: 33px;
 }
 
@@ -1158,23 +1158,89 @@ a.order-button:active {
 .company-information {
   display: flex;
   justify-content: space-between;
+  padding-top: 79px;
+  padding-bottom: 86px;
+}
+
+.company-information h2 {
+  margin-bottom: 26px;
 }
 
 .company-ability {
   width: 540px;
+  padding-right: 20px;
+}
+
+.company-ability p {
+  padding-bottom: 22px;
+}
+
+.company-ability p:last-of-type {
+  padding-right: 90px;
+}
+
+.company-ability .button {
+  min-width: 220px;
+  padding-top: 11px;
+  padding-bottom: 9px; 
+
+  text-align: center;
+}
+
+.transport-company-list {
+  margin-bottom: 17px;
+}
+
+.transport-company-list li {
+  position: relative;
+  padding-left: 36px;
+  padding-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 20px;  
+}
+
+.transport-company-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #ee3643;
 }
 
 .company-contacts {
   width: 300px;
 }
 
-.transport-company-list {
-  list-style-image: url("../img/red-marker.png");
+.company-contacts p {
+  margin-bottom: 31px;
+  padding-right: 90px;  
 }
 
-.transport-company-list li {
-  font-size: 18px;
-  line-height: 20px;
+.company-contacts a:first-of-type:hover img,
+.company-contacts a:first-of-type:focus img {
+  transform: scale(1.05);
+}
+
+.company-contacts img {
+  padding-bottom: 37px;
+}
+
+.company-contacts .button {
+  min-width: 300px;
+  padding-top: 11px;
+  padding-bottom: 9px; 
+
+  text-align: center;
+}
+
+.main-footer-address {
+  padding: 3px;
 }
 
 .main-footer-top-wrapper {
@@ -1184,6 +1250,7 @@ a.order-button:active {
 .main-footer-top {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 28px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1197,14 +1264,31 @@ a.order-button:active {
 .main-footer-navigation {
   display: flex;
   flex-direction: column;
+  margin: 25px;
+  margin-right: 0;
 }
 
 .footer-navigation-top {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 550px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 2px;
+}
+
+.footer-navigation-top li:not(:last-child),
+.footer-navigation-bottom li:not(:last-child) {
+  margin-right: 59px;
 }
 
 .footer-navigation-bottom {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 525px;
+  padding-top: 21px;
+  padding-bottom: 13px;
+  padding-left: 25px;
 }
 
 .main-footer-navigation a:hover,
@@ -1225,6 +1309,8 @@ a.order-button:active {
 .main-footer-bottom {
   display: flex;
   justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 18px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1233,6 +1319,7 @@ a.order-button:active {
 
 .main-footer-copyright {
   width: 300px;
+  padding-right: 55px;
 }
 
 .main-footer-email a,
@@ -1256,7 +1343,14 @@ a.order-button:active {
 
 .social-link-list {
   display: flex;
+  flex-wrap: wrap;
   width: 300px;
+  padding: 14px 71px;
+}
+
+.social-link-item {
+  display: inline-block;
+  padding-right: 5px;
 }
 
 .social-link-item a {
@@ -1270,18 +1364,21 @@ a.order-button:active {
 
 .social-link-vk a {
   background-image: url("../img/vk-icon.svg");
+  background-size: 26px 15px;
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 .social-link-facebook a {
   background-image: url("../img/fb-icon.svg");
+  background-size: 12px 22px;
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 .social-link-instagram a {
   background-image: url("../img/insta-icon.svg");
+  background-size: 21px 21px;
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -1290,6 +1387,19 @@ a.order-button:active {
 .social-link-item a:focus,
 .social-link-item a:active {
   background-color: #ee3643;
+}
+
+.developer-links {
+  display: flex;
+  width: 300px;
+}
+
+.developer-links p {
+  display: inline-block;
+}
+
+.main-footer-email {
+  margin-right: 50px;
 }
 
 .modal-map {
@@ -1345,6 +1455,8 @@ a.order-button:active {
 }
 
 .catalog-main-title {
+  margin: 0 auto;
+
   color: #32425c;
 
   background-color: #f2f6f8;
