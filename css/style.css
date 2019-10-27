@@ -214,7 +214,13 @@ a.cart::before {
   color: #ee3643;
 }
 
+.user-account {
+  width: 299px;
+}
+
 .user-account a {
+  display: inline-block;
+
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -230,7 +236,41 @@ a.cart::before {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.account-management {
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 13px; 
+  margin-bottom: 8px; 
+
+  background-color: #ffffff;
+}
+
+.user-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-account-icon {
+  margin-right: 13px;
+  background-image: url("../img/icon-user.svg");
+}
+
+.account-exit-icon {
+  background-image: url("../img/icon-logout.svg");
+}
+
 a.username {
+  display: block;
+  width: 200px;  
+  margin-right: 23px;
+
+  font-size: 21px;
+  line-height: 21px;
   color: #000000;
   text-decoration: none;
 }
@@ -242,6 +282,27 @@ a.username:focus {
 
 a.username:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-account > a:first-of-type {
+  position: relative;
+
+  margin-left: 17px;
+  margin-right: 28px;
+}
+
+.user-account > a:first-of-type::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  right: -19px;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  background-color: #32425c;
 }
 
 .main-header-contacts {
