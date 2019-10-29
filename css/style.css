@@ -1544,28 +1544,10 @@ a.order-button:active {
   margin-right: 50px;
 }
 
-.modal-map {
-  display: none;
-}
+.modal {
+  position: absolute;
 
-.modal-write-us {
-  display: none;
-}
-
-.modal-form label {
-  font-size: 18px;
-  line-height: 18px;
-}
-
-.modal-form input[placeholder],
-.modal-form textarea[placeholder] {
-  font-size: 13px;
-  line-height: 18px;
-  color: #a9a9a9;
-}
-
-.modal-form-button {
-  border: none;
+  display: block;
 }
 
 .close-button {
@@ -1573,10 +1555,161 @@ a.order-button:active {
   width: 21px;
   height: 21px;
   border: none;
+
   background-color: transparent;
   background-image: url("../img/close-button.svg");
   background-repeat: no-repeat;
   background-position: 50%;
+
+  cursor: pointer;
+}
+
+.modal-map {
+  top: 2333px;
+  left: 50%;
+
+  display: none;
+  width: 970px;
+  height: 467px;
+  margin-left: -485px;
+}
+
+.map-close-button {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+}
+
+.modal-write-us {
+  top: 2520px;
+  left: 50%;
+  z-index: 5;
+
+  display: none;
+  width: 620px;
+  height: 430px;
+  padding: 47px 80px;  
+  padding-bottom: 0;
+  margin-left: -310px;
+  border-top: 7px solid #ff5257;
+
+  background-color: #ffffff;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-close-button {
+  position: absolute;
+
+  top: 9px;
+  right: 9px;
+}
+
+.modal-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.modal-form p {
+  margin: 0;
+}
+
+.modal-form label {
+  display: block;
+  width: 220px;
+  margin-bottom: 9px;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.modal-form textarea,
+.modal-form input[type="text"] {
+  padding: 8px 14px;
+  padding-top: 7px;
+  margin-bottom: 21px;
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+
+  color: #000000;
+}
+
+.modal-form input[type="text"] {
+  width: 220px;
+}
+
+.modal-form textarea {
+  width: 100%;
+  min-height: 114px;
+  margin-bottom: 74px;
+}
+
+.modal-form textarea:hover,
+.modal-form input[type="text"]:hover,
+.modal-form textarea:focus,
+.modal-form input[type="text"]:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+
+  outline: none;
+}
+
+.modal-form input::-webkit-input-placeholder,
+.modal-form textarea::-webkit-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.modal-form input::-moz-placeholder,
+.modal-form textarea::-moz-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.modal-form input:-moz-placeholder,
+.modal-form textarea:-moz-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.modal-form input:-ms-input-placeholder,
+.modal-form textarea:-ms-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.modal-form::after {
+  content: "";
+  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 112px;
+
+  background-color: #f4f4f4;
+}
+
+.modal-form-button {
+  z-index: 15;
+
+  width: 460px;
+  padding: 10px 20px;
+  border: none;
 }
 
 .breadcrumbs {
@@ -2124,26 +2257,83 @@ input[type="radio"]:checked:disabled + label::before {
 }
 
 .modal-confirm {
+  position: fixed;
+  top: 411px;
+  left: 50%;
+  z-index: 100;
+
   display: none;
+  width: 620px;
+  height: 282px;
+  margin-left: -310px;
+  padding-top: 65px;  
+  padding-bottom: 37px;
+  border-top: 7px solid #ff5257;
+
+  background-color: #ffffff;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .modal-confirm span {
+  position: relative;
+
+  display: block;
+  margin-bottom: 68px;
+  padding-left: 180px;
+
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
 }
 
+.modal-confirm span::before {
+  content: "";
+  
+  position: absolute;
+  top: -17px;
+  left: 81px;
+
+  width: 66px;
+  height: 66px;
+
+  background-image: url("../img/cart-confirm.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal-buttons-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 620px;
+  height: 112px;
   background-color: #f1f1f1;
 }
 
-.continue-shopping-button {
+.modal-buttons-block .button {
+  display: inline-block;
+  width: 220px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+
+  text-align: center;
+}
+
+.modal-order-button {
+  margin-right: 20px;
+}
+
+.modal-buttons-block .continue-shopping-button {
+  padding-top: 8px;
+  padding-bottom: 6px;
   border: 3px solid #ffffff;
   border-radius: 2px;
 
   color: #000000;
 
   background-color: #ffffff;
+
+  outline: none;
 }
 
 .continue-shopping-button:hover,
