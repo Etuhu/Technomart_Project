@@ -122,6 +122,10 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
+.logo-image {
+  color: #000000;
+}
+
 .logo-image img {
   position: absolute;
   z-index: 10;
@@ -1635,6 +1639,13 @@ a.order-button:active {
   cursor: pointer;
 }
 
+.close-button:hover,
+.close-button:focus {
+  transform: scale(1.1);
+
+  outline: none;
+}
+
 .modal-map {
   top: 151px;
   left: 50%;
@@ -1700,7 +1711,7 @@ a.order-button:active {
   padding: 8px 14px;
   padding-top: 7px;
   margin-bottom: 21px;
-  border: 2px solid #dee3e4;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
 
   color: #000000;
@@ -1717,10 +1728,15 @@ a.order-button:active {
 }
 
 .modal-form textarea:hover,
-.modal-form input[type="text"]:hover,
+.modal-form input[type="text"]:hover {
+  border-color: #b5b5b5;
+
+  outline: none;
+}
+
 .modal-form textarea:focus,
 .modal-form input[type="text"]:focus {
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: #ee3643;
 
   outline: none;
 }
@@ -1781,6 +1797,11 @@ a.order-button:active {
   width: 460px;
   padding: 10px 20px;
   border: none;
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus {
+  outline: none;
 }
 
 .breadcrumbs {
