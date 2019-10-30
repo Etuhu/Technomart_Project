@@ -248,6 +248,8 @@ a.bookmarks:active::before {
 .user-account a:hover,
 .user-account a:focus {
   color: #ee3643;
+
+  transition: color 0.5s ease;
 }
 
 .user-account a:active {
@@ -264,7 +266,7 @@ a.bookmarks:active::before {
   background-color: #ffffff;
 }
 
-.account-exit-icon {
+a.account-exit-icon {
   display: block;
   width: 20px;
   height: 20px;
@@ -274,12 +276,15 @@ a.bookmarks:active::before {
   background-position: center;
 }
 
-.account-exit-icon:hover,
-.account-exit-icon:focus {
+a.account-exit-icon:hover,
+a.account-exit-icon:focus {
   background-image: url("../img/icon-logout-hover.svg");
+
+  transition-property: background-image;
+  transition-duration: 0.5s;  
 }
 
-.account-exit-icon:active {
+a.account-exit-icon:active {
   background-image: url("../img/icon-logout.svg");
 }
 
@@ -313,6 +318,8 @@ a.username::before {
 a.username:hover,
 a.username:focus {
   color: #000000;
+
+  transition: color 0.5s ease;
 }
 
 a.username:active {
@@ -321,7 +328,9 @@ a.username:active {
 
 a.username:hover::before,
 a.username:focus::before {
-  background-image: url("../img/icon-user-hover.svg")
+  background-image: url("../img/icon-user-hover.svg");
+
+  transition: background-image 0.5s ease;
 }
 
 a.username:active::before {
@@ -958,6 +967,7 @@ a.order-button:active {
   border: solid 1px rgb(234, 234, 234);
 
   text-align: center;
+  overflow: hidden;
 }
 
 .catalog .catalog-list-item:nth-child(3n) {
@@ -1045,9 +1055,9 @@ a.order-button:active {
 .catalog-item-buttons {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -218px;
 
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 218px;
   height: 158px;
@@ -1071,6 +1081,12 @@ a.order-button:active {
 .catalog-list-item:focus .catalog-item-buttons,
 .catalog-list-item:focus-within .catalog-item-buttons {
   display: flex;
+  z-index: 1;
+
+  transform: translateX(100%);
+
+  transition-property: transform;
+  transition-duration: 0.4s; 
 }
 
 .catalog-list-item .buy-item-button {
@@ -1612,6 +1628,8 @@ a.order-button:active {
 .social-link-item a:focus,
 .social-link-item a:active {
   background-color: #ee3643;
+
+  transition: background-color 0.6s ease;
 }
 
 .developer-links {
@@ -2183,7 +2201,6 @@ input[type="radio"]:checked:disabled + label::before {
   background-image: url("../img/radio-on-hover.svg");
 }
 
-
 .submit-button {
   display: inline-block;
   width: 140px;
@@ -2205,6 +2222,10 @@ input[type="radio"]:checked:disabled + label::before {
 .submit-button:focus,
 .submit-button:hover {
   border-color: #bdc6ca;
+
+  cursor: pointer;
+
+  transition: border-color 0.5s ease;
 }
 
 .submit-button:active {
@@ -2345,6 +2366,8 @@ input[type="radio"]:checked:disabled + label::before {
 .pagination-item a:hover,
 .pagination-item a:focus {
   border-color: #bdc6ca;
+
+  transition: border-color 0.5s ease;
 }
 
 .pagination-item a:active {
