@@ -140,7 +140,7 @@ input[type="radio"].visually-hidden {
   height: 47px;
 
   background-image: url("../img/logo-top.png");
-  background-position: center;
+  background-position: center;  
 }
 
 .header-logo:hover,
@@ -416,11 +416,15 @@ a.username:active::before {
   vertical-align: middle;
 
   background-color: #ee3643;
+
+  cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
   background-color: #ca2c37;
+
+  transition: all 0.5s ease;
 }
 
 .button:active {
@@ -474,6 +478,8 @@ a.order-button:active {
   color: #ee3643;
 
   background-color: #ffffff;
+
+  transition: color 0.7s ease;
 }
 
 .authorization-button:active {
@@ -507,6 +513,8 @@ a.order-button:active {
 .sign-in-button:hover::before,
 .sign-in-button:focus::before {
   background-image: url("../img/icon-login-hover.svg");
+
+  transition: background-image 0.7s ease;
 }
 
 .sign-up-button {
@@ -720,6 +728,8 @@ a.order-button:active {
 .offers-item-button:hover,
 .offers-item-button:focus {
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: all 0.3s ease-in-out;
 }
 
 .offers-item-button:active {
