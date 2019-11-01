@@ -254,10 +254,10 @@
           <h2 class="basic-title">Контакты</h2>
           <p class="basic-text">Вы можете забрать товар сами,
             заехав в наш офис:</p>
-          <a href="map.html">
+          <a class="modal-map-activator" href="map.html">
             <img src="img/minimap.png" width="300" height="158" alt="Расположение компании «Техномарт»">
           </a>
-          <a href="writeus.html" class="button">Заблудились? Напишите нам!</a>
+          <a href="writeus.html" class="button modal-writeus-activator">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
@@ -307,26 +307,33 @@
       </div>
     </footer>
     <section class="modal modal-map">
-      <h2 class="visually-hidden">Основная карта</h2>
-      <img src="img/map.png" width="970" height="467" alt="Расположение Техномарта на карте">
-      <button class="close-button map-close-button" type="button" aria-label="Закрыть карту" tabindex="0"></button>
+      <div class="modal-wrapper modal-map-wrapper"></div>
+      <div class="modal-map-content">
+        <h2 class="visually-hidden">Основная карта</h2>
+        <img src="img/map.png" width="970" height="467" alt="Расположение Техномарта на карте">
+        <button class="close-button map-close-button" type="button" aria-label="Закрыть карту" tabindex="0"></button>
+      </div>
     </section>
     <section class="modal modal-write-us">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <button class="close-button modal-close-button" type="button" aria-label="Закрыть окно обратной связи" tabindex="0"></button>
-      <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
-        <p>
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="email">Ваш e-mail:</label>
-          <input type="text" id="email" name="email" placeholder="email@example.com">
-        </p>
-        <label for="letter-text">Текст письма:</label>
-        <textarea id="letter-text" name="letter-text" placeholder="В свободной форме"></textarea>
-        <input class="button modal-form-button" type="submit" value="Отправить">
-      </form>
+      <div class="modal-wrapper modal-writeus-wrapper"></div>
+      <div class="modal-writeus-content">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <button class="close-button modal-writeus-close-button" type="button" aria-label="Закрыть окно обратной связи" tabindex="0"></button>
+        <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="email">Ваш e-mail:</label>
+            <input type="text" id="email" name="email" placeholder="email@example.com">
+          </p>
+          <label for="letter-text">Текст письма:</label>
+          <textarea id="letter-text" name="letter-text" placeholder="В свободной форме"></textarea>
+          <input class="button modal-form-button" type="submit" value="Отправить">
+        </form>
+      </div>
     </section>
+    <script src="js/index-scripts.js"></script>
   </body>
 </html>
