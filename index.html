@@ -6,7 +6,7 @@
     <title>Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min.style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -66,14 +66,12 @@
           <a href="#" class="button offers-item-button">Для стройки</a>
         </div>
         <div class="offers-item offers-item-slider">
-          <input class="visually-hidden" type="radio" id="puncher-slide" name="offers-item-slider-toggle" aria-label="Показать слайд с перфораторами">  
-          <input class="visually-hidden" type="radio" id="drill-slide" name="offers-item-slider-toggle" aria-label="Показать слайд с дрелями" checked>
           <div class="offers-item-slider-toggles">
-            <label for="puncher-slide" aria-label="Показать слайд с перфораторами"></label>
-            <label for="drill-slide" aria-label="Показать слайд с дрелями"></label>
+            <span class="slider-toggle slider-toggle-left" aria-label="Показать слайд с перфораторами" tabindex="0"></span>
+            <span class="slider-toggle slider-toggle-right slider-toggle-active" aria-label="Показать слайд с дрелями" tabindex="0"></span>
           </div>
           <span class="slider-arrow slider-arrow-left" tabindex="0" aria-label="Показать предыдущий слайд"></span>
-          <div class="slider-item slider-item-drill">
+          <div class="slider-item slider-item-drill slider-item-active">
             <h3>Дрели</h3>
             <span>Соседям на радость!</span>
             <a href="catalog.html" class="button slider-item-button">Открыть каталог</a>
@@ -322,18 +320,19 @@
         <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
           <p>
             <label for="name">Ваше имя:</label>
-            <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+            <input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
           </p>
           <p>
             <label for="email">Ваш e-mail:</label>
-            <input type="text" id="email" name="email" placeholder="email@example.com">
+            <input type="text" id="email" name="email" placeholder="email@example.com" required>
           </p>
           <label for="letter-text">Текст письма:</label>
-          <textarea id="letter-text" name="letter-text" placeholder="В свободной форме"></textarea>
+          <textarea id="letter-text" name="letter-text" placeholder="В свободной форме" required></textarea>
           <input class="button modal-form-button" type="submit" value="Отправить">
         </form>
       </div>
     </section>
-    <script src="js/index-scripts.js"></script>
+    <script src="js/min.index-scripts.js"></script>
+    <script src="js/min.slider.js"></script>
   </body>
 </html>
